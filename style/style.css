@@ -1,0 +1,102 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+    height: auto;
+    width: auto;
+     text-align: center;
+      
+ 
+}
+ h1{color:white;
+font-size:400%;
+ }
+
+ 
+  li a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 190%;
+    
+    color:white;
+    vertical-align: baseline;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+  }
+  
+  header {
+    background: #000;
+    height: 100%; /* set same as height & line-height below */
+  }
+  
+  .nav li {
+    display: inline-block;
+    list-style: none;
+    height: 60px; /* should be the same as line-height */
+    line-height: 60px; /* should be the same as height */
+    padding: 0 40px; /* "0" sets top and bottom padding to none */
+  }
+  
+ 
+  .nav li:hover {
+    background: rgb(122, 119, 119);
+    transition: background .3s;
+  }
+  
+  
+  .nav-link {
+    color: #7a6d6d;
+    text-decoration: none;
+  }
+  footer .ICONS{
+   
+    .fa:hover {
+        opacity: 0.9;
+    }
+
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+    }
+
+    .fa-pinterest {
+        background: #cb2027;
+        color: white;
+    }
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+   
+      
+     
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        
+    }
+
+   
+}
+.data {
+
+  display:flex;
+  font-size: 40px;
+  font-style: oblique;
+  object-fit:contain;
+justify-content: space-evenly;
+ padding-top: 025%;
+ padding-bottom: 025%;
+}
+.acc{font-style: oblique;
+  object-fit: contain;
+  justify-content: space-evenly;
+  padding-top: 025%;
+  padding-bottom: 025%;
+font-size: 300px;
+}
