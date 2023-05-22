@@ -105,7 +105,7 @@ footer .ICONS {
 .acc {
   font-style: oblique;
   object-fit: contain;
-  justify-content: space-evenly;
+  justify-content:space-between;
 
   font-size: 300px;
 }
