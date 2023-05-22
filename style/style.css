@@ -94,18 +94,19 @@ footer .ICONS {
 .data {
 
   display: flex;
-  font-size: 40px;
+  font-size: 60px;
   font-style: oblique;
-  object-fit: contain;
-  justify-content: space-evenly;
-  padding-bottom: 3%;
-  padding-top: 2%;
+
+  justify-content: space-between;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  justify-content: space-between;
 }
 
 .acc {
   font-style: oblique;
   object-fit: contain;
-  justify-content:space-between;
+  justify-content: space-evenly;
 
   font-size: 300px;
 }
