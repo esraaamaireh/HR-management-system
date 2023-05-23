@@ -1,101 +1,204 @@
 'use strict';
 
-function getRandomId(min, max) {
+function getRandomIdforsalary(min, max) {
 
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
 }
 var num = 1;
-var n; var netsalary;
+var netsalary;
 var sum = 0;
-const earr = [];
+var n;
+var level;
+var sarr = [];
+var salary;
+var imageurl1;
 
-function Employee(fullName, department, level, imageurl1) {
-    this.fullName = fullName;
-    this.department = department;
-    this.level = level;
+function getId(n) {//Create a method to generate a unique four digits employee id number.
 
-
-    this.imageurl = imageurl1;
-    earr.push(this);
-    console.log(earr);
-
-
-}
-Employee.prototype.render = function () {
-    document.write(`<div class ="data" :>Employee name :  ${ghazi.fullName}  Department: ${ghazi.department} Employee salary : ${ghazi.salary('senior')} \n
-    <div class ="data" :> Employee name :  ${lana.fullName}  Department: ${lana.department}. Employee salary : ${lana.salary('senior')}<\div>
-    <div class ="data" :> Employee name :  ${tamara.fullName}  Department: ${tamara.department}. Employee salary : ${tamara.salary('senior')}<\div>
-   <div class ="data" :>  Employee name :  ${safi.fullName}  Department: ${safi.department}. Employee salary : ${safi.salary('senior')}<\div>
-   <div class ="data" :>  Employee name : ${omar.fullName}  Department: ${omar.department}. Employee salary : ${omar.salary('senior')}<\div>
-  <div class ="data" :>   Employee name :  ${rana.fullName}  Department: ${rana.department}. Employee salary : ${rana.salary('senior')}<\div>
-   <div class ="data" :>  Employee name :  ${hadi.fullName}  Department: ${hadi.department}. Employee salary : ${hadi.salary('senior')}<div>`);
-
-}
-
-Employee.prototype.employeeID = function () {
     var string = "" + num;
     var pad = "0000";
     n = pad.substring(0, pad.length - string.length) + string;
     num++;
     return n;
-
 }
-Employee.prototype.salary = function (level) {
-    if (level == 'senior')
 
-        return getRandomId(1500, 2000)
+function getSalary(level) {//You will create a method for calculating the salary using the provided table by generating a random number between the minimum and maximum salary for each leve
+    if (level === 'senior')
+
+        return getRandomIdforsalary(1500, 2000);
     else if (level == 'mid-senior')
 
-        return getRandomId(1000, 1500)
+        return getRandomIdforsalary(1000, 1500);
+    else if (level == 'mid-senior')
+
+        ;
 
     else if (level == 'jenior')
-        return getRandomId(500, 1000)
+        return getRandomIdforsalary(500, 1000);
+
+};
+
+var ghazi = {
+    fullName: 'Ghazi Samer',
+    department: 'Administration',
+    level: 'senior',
+    employeeID: function ()
+   {    return  getId() ;
+      
+
+ }
+    ,
+    salary: function () {
+       return getSalary('senior');
+      },
+    imageurl1,
+
+    netsalarymethod: function () {
+        return netSalary(net)
+    }
 
 }
-    ;
-var ghazi = new Employee('Ghazi Samer', 'Administration', 'senior', 'ghazi photo ');
+console.log(ghazi);
 
-console.log(ghazi.employeeID(n));
-
-let lana = new Employee('Lana Ali', 'Finance', 'senior', 'lana photo ');
-
-console.log('Emolyee id is ' + lana.employeeID(n));
-
-let tamara = new Employee(' Tamara Ayoub ', 'Marketing', 'senior', 'tamara photo ');
-console.log('Emolyee id is ' + tamara.employeeID(n));
-
-let safi = new Employee(' Safi Walid ', 'Administration', 'mid-senior', 'safi photo ');
-console.log('Emolyee id is ' + safi.employeeID(n));
-let omar = new Employee('Omar Zaid', 'Development', 'senior', 'omar photo ');
-console.log('Emolyee id is ' + omar.employeeID(n));
-let rana = new Employee(' Rana Saleh   ', 'Development', 'jenior', 'rana photo ');
-console.log('Emolyee id is ' + rana.employeeID(n) + 'employee salary ' + rana.salary('jenior'));
-let hadi = new Employee(' Hadi Ahmad    ', 'Finance', 'senior', 'hadi photo ');
-console.log('Emolyee id is ' + hadi.employeeID(n));
+let lana = {
+    fullName: 'Lana Ali'
+    ,
+    department: 'Finance',
+    level: 'senior',
+    employeeID: function () {
+       return getId();
 
 
+    }
+    ,
+    salary: function () { return getSalary('senior')},
+    imageurl1,
+    netsalarymethod: function () {
+        return netSalary(net)
+    }
+
+}
+console.log(lana
+);
+let tamara = {
+    fullName: ' Tamara Ayoub '
+    ,
+    department: 'Marketing',
+    level: 'senior',
+    employeeID: function() {
+        return getId();
 
 
+    }
+    ,
+    salary: function () {return getSalary('senior')},
+    imageurl1,
+    netsalarymethod: function () {
+        return netSalary(net)
+    }
+
+}
+
+console.log(tamara);
+let safi = {
+    fullName: 'Safi Walid',
+    department: 'Administration',
+    level: 'mid-senior',
+ employeeID: function() {
+     return  getId(n);
 
 
+    }
+    ,
+    salary: function () {
+        return   getSalary('mid-senior')
+    },
+    imageurl1,
+    netsalarymethod: function () {
+        return netSalary(net)
+    }
+
+}
+console.log(safi
+);
+
+let omar = {
+    fullName: 'Omar Zaid'
+    ,
+    department: 'Development',
+    level: 'senior',
+    employeeID: function () {
+        return getId(n);
 
 
+    },
+    salary: function () { return  getSalary('senior')},
+    imageurl1,
+    netsalarymethod: function () {return  netSalary(net) 
+}
+
+}; console.log(omar
+);
+
+let rana = {
+    fullName: ' Rana Saleh   '
+    ,
+    department: 'Development',
+    level: 'jenior',
+    employeeID: function () {
+        return getId(n);
 
 
+    }
+    ,
+    salary: function () { return getSalary('jenior')},
+    imageurl1,
+    netsalarymethod: function () {
+        return netSalary(net)
+    }
+
+};console.log(rana);
+let hadi = {
+
+    fullName: ' Hadi Ahmad    '
+    ,
+    department: 'Finance',
+    level: 'mid-senior',
+    employeeID: function () {
+        return   getId(n);
 
 
+    }
+    ,
+    salary: function () {return getSalary('mid-senior')},
+    imageurl1,
+    netsalarymethod: function () {
+        return netSalary(net)
+    }
+
+}; console.log(hadi
 
 
+);
 var net;
-
 function netSalary(net) {
-    sum = ghazi.salary('senior') + lana.salary('senior') + tamara.salary('senior') + safi.salary('mid-senior') + omar.salary('senior') + rana.salary('jenior') + hadi.salary('senior');
+    sum = ghazi.salary() + tamara.salary() + lana.salary() + safi.salary() + hadi.salary() + rana.salary() + omar.salary();
 
 
     return net = (sum - (sum * .075))
-} console.log("The net salary of all employees is  " + netSalary(net))
+}
+
+console.log("The net salary is  " + netSalary(net))
 
 
-ghazi.render();
+
+
+document.getElementById("1").innerHTML = ' Employee name  ' + ghazi.fullName + ' Employee salary    ' + ghazi.salary('senior') + '\n';//You will create a render method to render each employee's name with their salary on the home page using document. write() or you can use innerHTML to display them.
+document.getElementById("2").innerHTML = ' Employee name ' + lana.fullName + ' Employee salary ' + lana.salary('senior') + '\n';
+document.getElementById("3").innerHTML = ' Employee name ' + tamara.fullName + ' Employee salary ' + tamara.salary('senior') + '\n';
+document.getElementById("4").innerHTML = ' Employee name ' + safi.fullName + ' Employee salary ' + safi.salary('mid-senior') + '\n';
+document.getElementById("5").innerHTML = ' Employee name ' + omar.fullName + ' Employee salary ' + omar.salary('senior') + '\n';
+document.getElementById("6").innerHTML = ' Employee name ' + rana.fullName + ' Employee salary ' + rana.salary('jenior') + '\n';
+document.getElementById("7").innerHTML = ' Employee name ' + hadi.fullName + ' Employee salary ' + hadi.salary('mid-senior') + '\n';
