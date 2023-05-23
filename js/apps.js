@@ -1,11 +1,5 @@
 'use strict';
 
-function getRandomId(min, max) {
-
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
-}
 var num = 1;
 var n; var netsalary;
 var sum = 0;
@@ -24,13 +18,13 @@ function Employee(fullName, department, level, imageurl1) {
 
 }
 Employee.prototype.render = function () {
-    document.write(`<div class ="data" :>Employee name :  ${ghazi.fullName}  Department: ${ghazi.department} Employee salary : ${ghazi.salary('senior')} \n
-    <div class ="data" :> Employee name :  ${lana.fullName}  Department: ${lana.department}. Employee salary : ${lana.salary('senior')}<\div>
-    <div class ="data" :> Employee name :  ${tamara.fullName}  Department: ${tamara.department}. Employee salary : ${tamara.salary('senior')}<\div>
-   <div class ="data" :>  Employee name :  ${safi.fullName}  Department: ${safi.department}. Employee salary : ${safi.salary('senior')}<\div>
-   <div class ="data" :>  Employee name : ${omar.fullName}  Department: ${omar.department}. Employee salary : ${omar.salary('senior')}<\div>
-  <div class ="data" :>   Employee name :  ${rana.fullName}  Department: ${rana.department}. Employee salary : ${rana.salary('senior')}<\div>
-   <div class ="data" :>  Employee name :  ${hadi.fullName}  Department: ${hadi.department}. Employee salary : ${hadi.salary('senior')}<div>`);
+    document.write(`</br> </br> </br> <div class ="data" :>Employee name :  ${ghazi.fullName}  Department: ${ghazi.department} Employee salary : ${ghazi.salary('senior')}    <\div></br> 
+    <div class ="data" :> Employee name :  ${lana.fullName}  Department: ${lana.department}. Employee salary : ${lana.salary('senior')}<\div></br>
+ </br>   <div class ="data" :> Employee name :  ${tamara.fullName}  Department: ${tamara.department}. Employee salary : ${tamara.salary('senior')}<\div></br>
+  </br> <div class ="data" :>  Employee name :  ${safi.fullName}  Department: ${safi.department}. Employee salary : ${safi.salary('senior')}<\div></br>
+   </br><div class ="data" :>  Employee name : ${omar.fullName}  Department: ${omar.department}. Employee salary : ${omar.salary('senior')}<\div></br>
+ </br> <div class ="data" :>   Employee name :  ${rana.fullName}  Department: ${rana.department}. Employee salary : ${rana.salary('senior')}<\div></br>
+ </br>  <div class ="data" :>  Employee name :  ${hadi.fullName}  Department: ${hadi.department}. Employee salary : ${hadi.salary('senior')}<div></br>`);
 
 }
 
@@ -45,13 +39,13 @@ Employee.prototype.employeeID = function () {
 Employee.prototype.salary = function (level) {
     if (level == 'senior')
 
-        return getRandomId(1500, 2000)
+        return getRandomIdForSalary(1500, 2000)
     else if (level == 'mid-senior')
 
-        return getRandomId(1000, 1500)
+        return getRandomIdForSalary(1000, 1500)
 
     else if (level == 'jenior')
-        return getRandomId(500, 1000)
+        return getRandomIdForSalary(500, 1000)
 
 }
     ;
@@ -86,7 +80,13 @@ console.log('Emolyee id is ' + hadi.employeeID(n));
 
 
 
+////net salary calculating
+function getRandomIdForSalary(min, max) {
 
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
 var net;
 

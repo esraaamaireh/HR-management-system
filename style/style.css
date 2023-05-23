@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  /* box-sizing: border-box; */
+ 
   height: auto;
   width: auto;
   text-align: center;
@@ -10,38 +10,40 @@
 }
 
 h1 {
+  padding: 02%;
   color: white;
-  font-size: 400%;
+  font-size: 800%;
 }
 
 
-li a {
+.nav li  a {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 190%;
+ 
 
   color: white;
-  vertical-align: baseline;
+ 
   font-family: 'Roboto', sans-serif;
-  font-weight: 100;
+ 
+  font-size: 400%;
 }
 
 header {
   background: #000;
-  height: 100%;
-  /* set same as height & line-height below */
+  height: 500%;
+  
 }
 
 .nav li {
   display: inline-block;
   list-style: none;
-  height: 60px;
-  /* should be the same as line-height */
+  height: 200px;
+  
   line-height: 60px;
-  /* should be the same as height */
+
   padding: 0 40px;
-  /* "0" sets top and bottom padding to none */
+  
 }
 
 
@@ -94,13 +96,11 @@ footer .ICONS {
 .data {
 
   display: flex;
-  font-size: 60px;
-  font-style: oblique;
-
-  justify-content: space-between;
-  padding-bottom: 10%;
-  padding-top: 10%;
-  justify-content: space-between;
+  font-size: 80px;
+  font-display:initial;
+font-weight: 200;
+flex-direction: column;
+  
 }
 
 .acc {
@@ -109,4 +109,7 @@ footer .ICONS {
   justify-content: space-evenly;
 
   font-size: 300px;
+}
+footer p {
+  font-size: 400%;
 }
